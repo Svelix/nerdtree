@@ -19,7 +19,7 @@ function! s:Bookmark.AddBookmark(name, path)
         endif
     endfor
     call add(s:Bookmark.Bookmarks(), s:Bookmark.New(a:name, a:path))
-    call s:Bookmark.Sort()
+    " call s:Bookmark.Sort()
 endfunction
 
 " FUNCTION: Bookmark.Bookmarks()   {{{1
@@ -101,7 +101,7 @@ function! s:Bookmark.CacheBookmarks(silent)
                 call nerdtree#echo(invalidBookmarksFound . " invalid bookmarks were read. See :help NERDTreeInvalidBookmarks for info.")
             endif
         endif
-        call s:Bookmark.Sort()
+        " call s:Bookmark.Sort()
     endif
 endfunction
 
